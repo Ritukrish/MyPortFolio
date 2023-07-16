@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2fd73113d3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="ritu.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About </a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>                  
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hii, I am <span>Ritu </span>Kumari<br>
+                    An Engineer, <br>
+                     from <span>India.</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------About--------------------------- -->
+
+    <div id="about">
+        <div class="container">  
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="me.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Hello! My name is <b>Ritu Kumari</b> and I am an engineer with a passion for innovation and problem-solving. With a background in Computer Science, I have developed a strong foundation in Web Development. I thrive in dynamic and challenging environments where I can apply my technical knowledge to create efficient and effective solutions.</p>
+               
+                <div class="tab-titles">
+                    <p class="tab-links active-links" onclick= "opentab('skills')">Skills</p>
+                    <p class="tab-links " onclick="opentab('education')">Education</p>
+                    <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span>
+                        <br>
+                        HTML,CSS and basics of JavaScript </li>
+                       <li><span>WordPress</span><br>
+                        Design form pages and Blogs </li>
+                        <li><span>Problem solving</span>
+                        <br>
+                        C/C++ Programming Languages<br>Datastructure and Algorithm </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>B.Tech</span>
+                        <br>
+                       Computer Science and Engineering<br> (currently in 3<sup>rd</sup> Sem with 8.7 cgpa).</li>
+                       <li><span>Intermediate</span><br>
+                        Central Board Of Secondary Education<br>(passed with PCM with 88%). </li>
+                        <li><span>Matriculation</span>
+                        <br>
+                        Central Board Of Secondary Education <br>(passed with 89%). </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Full Stack Development</span>
+                        <br>
+                        Internship through India Advocacy. </li>
+                       <li><span>WordPress</span><br>
+                        Designing form pages and Blogs. </li>
+                        <li><span>Frontend Development</span>
+                        <br>
+                        Internship through Technophilia. </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>  
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links"); 
+    var tabcontents = document.getElementsByClassName("tab-contents"); 
+    function opentab(tabname){
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<!-- -------------------------services------------------------------ -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-titles">My Services</h1>
+        <div class="service-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Got selected as a paid intern in
+                    the online service company as
+                    a web developer.
+                </p>
+                <a href = "#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Problem-solving</h2>
+                <p>5 star on Hacherrank on
+                    programming languages c/c++.
+                </p>
+                <a href = "#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Full stack Development</h2>
+                <p>Deep knowledge of HTML5, CSS and basics of JavaScript. Had made various project on it.
+                </p>
+                <a href = "#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------------------------------portfolio--------------------------------------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="w3.jpg">
+                <div class="layer">
+                    <h3>Services - Pages</h3>
+                    <p>I and my team including my classmates have designed various services pages and form pages that provides services to common user.
+                         I have learnt the application of functionality of HTML and CSS on any website.
+                        </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="w2.jpg">
+                <div class="layer">
+                    <h3>Form - Pages</h3>
+                    <p>I have designed a form pages where customer can upload their necessary document. Learnt to work on WordPress.</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="w1.jpg">
+                <div class="layer">
+                    <h3>UI/UX Design</h3>
+                    <p>I have only designed the front-end part that include html and css. My page is responsive as it is completely designed to fit on any dimension of screen whether mobile or desktop.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+
+<!-- ------------------------------contact me----------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>ritukrish23@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>+9123456789</p>
+                <div class="social-icon">
+                    <a href="https://www.facebook.com/profile.php?id=100089161616938&mibextid=ZbWKwL"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/rubiritu25/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ritukrish23/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Ritukrish"><i class="fa-brands fa-github"></i></a>
+           </div>
+                <a href="my-resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit"class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-solid fa-copyright"></i> Ritu <br> Made with <i class="fa-solid fa-heart" id="love"></i> by Ritu</p>
+    </div>
+</div>
+<script>
+    var side = document.getElementById("sidemenu");
+    function openmenu(){
+        side.style.right = "0";
+    }
+    function closemenu(){
+        side.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwXUMaN4q8F1Mj2KywRAN2p1hMXbf48IdcpU1Z8tTBt5_L1TwJZiqga8DcY9nIRYlST/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "Message sent successfully!"
+            setTimeout(function() {
+                msg.innerHTML = " "                
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
